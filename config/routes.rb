@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   # get "restaurants/:restaurant_id/reviews/new", to: "reviews#new", as: :new_review
   # post "restaurants/:restaurant_id/reviews/", to: "reviews#create", as: :create_review
   resources :restaurants do
-    resources :reviews
+    resources :reviews, except: :new
   end
 end
